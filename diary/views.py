@@ -51,3 +51,23 @@ def delete_note():
                 return jsonify({'result':True})
 
         return jsonify({'result':False})
+
+
+# 메모 삭제 기능
+@views.route('/update-note', methods=['PUT'])
+def update_note():
+    # PUT : 메모 수정
+    if request.method == "PUT":
+        note = request.get_json()
+        note_id = note.get('noteId')
+        title = note.get('title')
+        content = note.get('content')
+
+        select_note = Note.query.get(note_id)
+        if select_note:
+            if select_note.user_id == current_user.id : 
+                select_note.title = title
+                select_note.content = content
+                db.session.commit()
+
+        return jsonify({})

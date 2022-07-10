@@ -14,7 +14,7 @@ auth = Blueprint('auth', __name__)
 @login_required
 def logout():
     logout_user()
-    return render_template('logout.html')
+    return redirect(url_for('auth.sign_in'))
 
 # login
 @auth.route('/sign-in', methods=['GET', 'POST'])

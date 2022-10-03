@@ -2,7 +2,7 @@
 ## 영상 및 Github 링크
 - [Youtube 영상](https://youtu.be/Y8-jJ8yVFag)
 - [WikiDocs 노트](https://wikidocs.net/167254)
-- [Github 저장소](https://github.com/SemiHedge/learn-flask-note)
+- [Github 저장소](https://github.com/SemiHedge/tutorial-flask-note)
 
 ## 적절한 교육 대상
 - 필수 : Python, HTML, CSS. 선택 : JavaScript
